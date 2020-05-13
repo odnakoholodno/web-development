@@ -26,6 +26,8 @@ BEGIN
 END;
 
 BEGIN {WorkWithQueryString}
+  WRITELN('Content-Type: text/plain');
+  WRITELN;
   WRITELN('First Name: ', GetQueryStringParameter('first_name'));
   WRITELN('Last Name: ', GetQueryStringParameter('last_name'));
   WRITELN('Age: ', GetQueryStringParameter('age'))
