@@ -5,25 +5,25 @@ function getGETParameter($parameter)
   return isset($_GET[$parameter]) ? $_GET[$parameter] : null;
 }
 $text = getGETParameter('text');
-function removeSpacesOut($str) 
+function removeExtraBlanks(string $text): string
 {
   $i = 0;
-  while ($i < strlen($str) & $str[$i] == ' ') $i++;
-  while ($i < strlen($str)) 
+  while ($i < strlen($text) & $text[$i] == ' ') $i++;
+  while ($i < strlen($text)) 
   {
-    if ($str[$i] != ' ') 
+    if ($text[$i] != ' ') 
     {
-      echo $str[$i];
+      echo $text[$i];
       $i++;
     } 
     else 
     {
-      while ($str[$i] == ' ' & $i < strlen($str)) $i++;
-      if ($i != strlen($str)) echo ' ';
+      while ($text[$i] == ' ' & $i < strlen($text)) $i++;
+      if ($i != strlen($text)) echo ' ';
     }
   }
 }
-removeSpacesOut($text);
+removeExtraBlanks($text);
 echo '#';
     
     
