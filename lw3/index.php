@@ -5,25 +5,34 @@ function getGETParameter($parameter)
   return isset($_GET[$parameter]) ? $_GET[$parameter] : null;
 }
 $text = getGETParameter('text');
+if ($text == null)
+{
+  echo 'Вы не передали параметр';
+}
+else
+{
+  echo removeExtraBlanks($text);
+}
 function removeExtraBlanks(string $text): string
 {
-  $i = 0;
-  while ($i < strlen($text) & $text[$i] == ' ') $i++;
-  while ($i < strlen($text)) 
+  $result = '';
+  $isBlank = true;
+  for ($i = 0; $i < strlen($text); $i++)
   {
-    if ($text[$i] != ' ') 
+    if ($text[$i] == ' ')
     {
-      echo $text[$i];
-      $i++;
-    } 
-    else 
+      if ($isBlank == false)
+      {
+        $result .= ' ';
+        $isBlank = true;
+      }
+    }
+    else
     {
-      while ($text[$i] == ' ' & $i < strlen($text)) $i++;
-      if ($i != strlen($text)) echo ' ';
+      $result .= $text[$i];
+      $isBlank = false;
     }
   }
+  return $result;
 }
-removeExtraBlanks($text);
-echo '#';
-    
-    
+
