@@ -18,19 +18,19 @@ $filename = 'data/' . $email . '.txt';
 $fp = fopen($filename, 'w');
 if ($last_name <> '')
 {
-    $text .= 'Фамилия = ' . $last_name . "\r\n";
+    $text .= 'Last Name: ' . $last_name . "\r\n";
 }
 if ($first_name <> '')
 {
-    $text .= 'Имя = ' . $first_name . "\r\n";
+    $text .= 'First Name: ' . $first_name . "\r\n";
 }
 if ($age <> '')
 {
-    $text .= 'Возраст = ' . $age . "\r\n";
+    $text .= 'Age: ' . $age . "\r\n";
 }
 if ($email <> '')
 {
-    $text .= 'Email = ' . $email . "\r\n";
+    $text .= 'Email: ' . $email . "\r\n";
 }
 fwrite($fp, $text);
 fclose($fp);
