@@ -76,3 +76,4 @@ function passwordStrength(string $identifier): int
     }
     return $strength;
 }
+?>
