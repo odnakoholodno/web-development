@@ -35,4 +35,4 @@ function removeExtraBlanks(string $text): string
     }
     return $result;
 }
-
+?>
