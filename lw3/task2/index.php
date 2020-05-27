@@ -47,3 +47,4 @@ function checkIdentifier(string $identifier): bool
     }
     return $result;
 }
+?>
