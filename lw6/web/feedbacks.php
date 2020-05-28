@@ -9,7 +9,7 @@
     feedbackPage();
   }
 
-function getUser(): string
+function getUser(): void
 {
   $dataFeedback = [];
   $dataFeedback['success'] = true;
@@ -24,5 +24,4 @@ function getUser(): string
       $dataFeedback['success'] = false;
   }
   feedbackPage($dataFeedback);
-  return $dataFeedback;
 }
