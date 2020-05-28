@@ -46,10 +46,10 @@
     </form>
     <?php
       if (isset($args['success'])):
-        if (!$args['success']):
+        if ($args['success']):
           echo "<h3 class='message_success'> Сообщение успешно отправлено</h3>";
         endif ;
-        if (($args['success'])):
+        if (!($args['success'])):
           echo "<h3 class='message_error'>Введены некорректные данные</h3>";
         endif;
       endif; ?>
