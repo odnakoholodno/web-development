@@ -13,4 +13,5 @@ $email = fgets($fp);
 $age = fgets($fp);
 $text = $first_name . $last_name . $email . $age;
 echo $text;
+fclose($fp);
 ?>
