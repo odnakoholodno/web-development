@@ -24,4 +24,5 @@ function getUser(): string
       $dataFeedback['success'] = false;
   }
   feedbackPage($dataFeedback);
+  return $dataFeedback;
 }
