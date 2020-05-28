@@ -34,4 +34,3 @@ if ($email <> '')
 }
 fwrite($fp, $text);
 fclose($fp);
-?>
